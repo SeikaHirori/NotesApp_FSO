@@ -14,7 +14,7 @@ import Footer from './components/Footer.tsx';
 
 
 function App() {
-  const [notes, setNotes] = useState<interfaceNote[]>(null);
+  const [notes, setNotes] = useState<interfaceNote[]>([]);
   const [newNote, setNewNote] = useState<string>('a new note...')
   const [showAll, setShowAll] = useState<boolean>(true)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
@@ -72,7 +72,7 @@ function App() {
         )
       })
       .catch(error => {
-        const errorMessage: string = `the note "${note.content}" was already deleted from server`;
+        const errorMessage: string = `the note "${note.content}" was already deleted from server. Error: ${error}`;
         setErrorMessage(errorMessage);
         setTimeout(() => {
           setErrorMessage(null);
