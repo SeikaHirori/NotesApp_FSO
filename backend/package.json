@@ -1,11 +1,11 @@
 {
-  "name": "part3_v2",
+  "name": "NotesAppFSO",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.ts",
-    "dev": "nodemon index.ts",
+    "start": "tsc --build && node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
