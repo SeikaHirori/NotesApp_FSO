@@ -115,7 +115,10 @@ const unknownEndpoint = (request: Request, response: Response) => {
 app.use(unknownEndpoint)
 
 
-
-const PORT = 3001
+/**
+ * Port specs for Render
+ * https://arc.net/l/quote/mzzwpcmr
+ */
+const PORT = process.env.PORT || 3001
 app.listen(PORT)
 console.log(`Server running on port ${PORT}`)
