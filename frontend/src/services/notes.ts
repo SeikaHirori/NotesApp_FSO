@@ -1,6 +1,6 @@
 import axios from "axios"
 import { interfaceNote } from "../model/interfaceNote"
-const baseURL:string = 'http://localhost:3001/api/notes'
+const baseURL:string = '/api/notes'
 
 const getAll = () => {
     const request = axios.get<interfaceNote[]>(baseURL);

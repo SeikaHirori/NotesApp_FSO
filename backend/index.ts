@@ -9,6 +9,12 @@ const app: Express = express()
 app.use(cors())
 app.use(express.json())
 
+/**
+ * Middleware to show static content
+ * https://arc.net/l/quote/vwjaaght
+ */ 
+app.use(express.static('dist'))
+
 let notes: Note[] = [
     {
        id: 1,
@@ -113,7 +119,6 @@ const unknownEndpoint = (request: Request, response: Response) => {
     })
 }
 app.use(unknownEndpoint)
-
 
 /**
  * Port specs for Render
