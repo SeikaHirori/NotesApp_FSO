@@ -1,6 +1,11 @@
+# Ignore transpile 
 *.js
 *.js.map
 
+# Except files in static page that deploys in backend
+!/backend/dist/**
+
+# Ignore local dev files
 .vscode/
 .env
 .env.local
